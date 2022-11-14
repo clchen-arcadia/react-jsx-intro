@@ -8,7 +8,17 @@ const tweets = [
 
 function App() {
   return (<div>
-    <Tweet
+    {tweets.map(t => <Tweet
+    username={t.username}
+    name={t.name}
+    date={t.date}
+    message={t.message}
+    />)}
+  </div>)
+}
+
+
+    {/* <Tweet
       username="BigWhale"
       name="Test1"
       date="11/14"
@@ -25,6 +35,4 @@ function App() {
       name="Test3"
       date="11/13"
       message="Yo"
-    />
-  </div>)
-}
+    /> */}
